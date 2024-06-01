@@ -1,0 +1,419 @@
+*{
+    box-sizing: border-box;
+}
+
+.scroll-up {
+    position: fixed;
+    right: 0.5%;
+    bottom: 3%;
+    cursor: pointer;
+  }
+  
+  .up-arrow {
+    width: 3rem;
+    height: 3rem;
+  }
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1{
+    font-size: 3.5em;
+}
+h2{
+    font-size: 2.7em;
+}
+h3{
+    font-size: 2em;
+}
+p{
+    font-size: 1.25em;
+}
+
+button{
+    font-size: 1.25em;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 2px solid #8D6E63;
+    box-shadow: 2px 2px 10px rgb(0,0,0,0.5);
+    background-color: #8D6E63;
+    color: white;
+}
+/*#A1887F*/
+button:hover{
+    background-color: #69524a;
+    border: 2px solid rgb(0,0,0,0.25);
+    cursor: pointer;
+}
+
+i{
+    font-size: 1.5em;
+}
+.container{
+    max-width: 1000px;
+    margin: auto;
+}
+
+.color-acento{
+    color: rgb(84, 184, 84);
+}
+
+header{
+    background-color: #f8f8f8;
+
+}
+
+/*.hamburger {
+    display: block;
+    cursor: pointer;
+}*/
+
+/*.bar {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #333; 
+    margin: 6px 0;
+}*/
+
+
+
+/*header .logo{
+    margin: 0;
+    padding: 15px 20px;
+    color: white;
+    background-color: rgb(84, 184, 84);
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    font-weight: bold;
+
+}*/
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.logo{
+    height: 90px;
+}
+
+/*header .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}*/
+
+.abrir{
+    display: block;
+    background-color: #f8f8f8;
+    border-radius: 0;
+    border: 0;
+    color: black;
+    box-shadow: none;
+    position: absolute;
+    right: 0;
+
+}
+.cerrar{
+    display: block;
+    background-color: rgb(84, 184, 84);
+    border-radius: 0;
+    border: 0;
+    color: white;
+    box-shadow: none;
+
+}
+
+.cerrar:hover{
+    background-color:  rgb(84, 184, 84);
+    border: 0;
+}
+.abrir:hover{
+    background-color: #f8f8f8;
+    border: 0;
+}
+
+
+ul li{
+    list-style-type: none;
+    flex-direction: column;
+    margin-top: 5px;
+}
+
+.nav{
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(84, 184, 84);
+    padding: 2rem;
+    box-shadow: 0 0 0 100vmax rgba(0,0,0,0.5);
+}
+
+.nav.visible{
+    opacity: 1;
+    visibility: visible;
+}
+
+.nav-item{
+    margin: 2rem 0;
+}
+
+/*header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 25px;
+    
+}*/
+
+a{
+    text-decoration: none;
+    color: white;
+    margin-right: 10px;
+}
+
+#hero{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: 90vh;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("/assets/images/vivero-hero-opcion2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#somos-greengarden .container {
+    text-align: center;
+    padding: 200px 12px;
+}
+
+#nuestros-servicios h2{
+    margin-top:  0;
+    font-size: 3em;
+}
+
+#nuestros-servicios{
+    background-color:rgb(84, 184, 84);
+    color: white;
+    padding: 100px 12px;
+
+}
+#nuestros-servicios .container{
+    text-align: center;
+}
+
+
+#nuestros-servicios p {
+    display: none;
+}
+
+#nuestros-servicios p {
+    display: none;
+}
+
+#nuestros-servicios .carta {
+    background-size: cover;
+    background-position: center center;
+    padding: 30px;
+    margin: 12px;
+    border-radius: 15px;
+
+}
+
+.carta:first-child {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("/assets/images/catalogo-plantas.jpg");
+}
+.carta:nth-child(2) {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("/assets/images/diseño-jardines.jpg");
+}
+.carta:nth-child(3) {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("/assets/images/asesoria-jardines.jpg");
+}
+
+#contacto .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 150px 0;
+}
+
+
+#contacto h2{
+    margin-top: 0;
+}
+
+footer{
+    margin-top: 0;
+    font-size: 0.75em;
+    text-align: center;
+}
+
+@media (min-width: 600px){
+
+    header a:hover{
+        color: rgb(84, 184, 84);
+    }
+    a{
+        text-decoration: none;
+        color: black;
+        margin-right: 10px;
+    }
+
+
+    header{
+        position: fixed;
+        width: 100%;
+    }
+
+    .hamburger{
+        display: none;
+    }
+
+    header{
+        flex-direction: row;
+        justify-content: space-between;
+        
+    }
+
+    .abrir{
+        display: none;
+    }
+
+    .nav{
+        opacity: 1;
+        visibility: visible;
+        box-shadow: none;
+        background-color: #f8f8f8;
+    }
+
+    ul{
+        display: flex;
+    }
+   
+    .cerrar{
+        display: none;
+    }
+
+    #somos-greengarden .container{
+        display: flex;
+        justify-content: center;
+    }
+
+    #somos-greengarden .texto{
+        width: 50%;
+        max-width: 600px;
+        text-align: initial;
+        padding: 0px 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+
+    #somos-greengarden h2{
+        margin-top: 0;
+    }
+
+    #somos-greengarden .img-container{
+        background-image: url(/assets/images/seccion-somos-greengarden.jpg);
+        background-size: cover;
+        background-position: center center;
+        height: 500px;
+        width: 400px;
+    }
+
+    #nuestros-servicios .nuestros-servicios{
+        display: flex;
+        justify-content: center;
+        padding: 15px;
+
+    }
+
+    #nuestros-servicios h3{
+        margin-top: 0;
+        color: white;
+    }
+
+    #nuestros-servicios p{
+        display: block;
+        margin-bottom: 30px;
+        padding-top: 15px;
+    }
+
+    #nuestros-servicios .carta{
+        background-size: 100% 140px;
+        background-repeat: no-repeat;
+        background-position-y: 0;
+        background-color: rgba(96, 218, 96,0.5);
+        box-shadow: 2px 2px 10px rgb(0,0,0,0.5);
+        color: #ffffff;
+
+    }
+
+    .carta:first-child {
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        )
+        ,url("/assets/images/catalogo-plantas-cropped.jpg");
+    }
+    .carta:nth-child(2) {
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        )
+        ,url("/assets/images/diseño-jardines-cropped.jpg");
+    }
+    .carta:nth-child(3) {
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        )
+        ,url("/assets/images/asesoria-jardines-cropped.jpg");
+    }
+
+}
